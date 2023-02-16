@@ -24,6 +24,8 @@ body {
 
 #game_elements {
      grid-area: 1 /1;
+     position: relative;
+     overflow: hidden;
 }
 
 /* positioning elements */
@@ -31,45 +33,116 @@ body {
 #coin1_container {
     position: absolute;
     
-    top: 50vw;
+    top: 0vw;
     left: 10vw;
 }
 
 #coin1_sprite {
-    width: 100%;   
+    width: 100%;
+   
+}
+.falling {
+  animation-name:coin1_sprite;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+animation-fill-mode: forwards;  
 }
 
+
+@keyframes falling {
+  0% {
+    transform: translate(0, -300%) scale(1,1);
+  }
+
+  100% {
+    transform: translate(0, 56.25vw) scale(0.1,0.1);
+  }
+  
+}
+.pause{
+    animation-play-state: paused;
+}
 #coin2_container {
     position: absolute;
     
-    top: 35vw;
+    top: 0vw;
     left: 40vw;
 }
 
 #coin2_sprite {
     width: 100%;
 }
+#coin2_sprite {
+  animation-name:coin2_sprite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coin2_sprite {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 56.25vw);
+  }
+}
+
+
 
 #coin3_container {
     position: absolute;
     
-    top: 20vw;
+    top: 0vw;
     left: 70vw;
 }
 
 #coin3_sprite {
     width: 100%;
 }
+#coin3_sprite {
+  animation-name:coin3_sprite;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coin3_sprite {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 56.25vw);
+  }
+}
 
 #bomb_container {
     position: absolute;
     
-    top: 20vw;
+    top: 0vw;
     left: 30vw;
 }
 
 #bomb_sprite {
     width: 100%;
+}
+#bomb_sprite {
+  animation-name:bomb_sprite;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bomb_sprite {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 56.25vw);
+  }
 }
 
 #heart_container {
